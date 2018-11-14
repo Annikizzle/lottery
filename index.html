@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Random</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div class="jumbotron">
+    <style>
+    .jumbotron {background-color: black;
+                color: white;
+    }
+    
+    </style>
+
+    <h1 class="text-center">Click to kitty to generate a Random Number!</h1>
+    &nbsp;
+
+    <div class="text-center">
+
+      <!-- Here we have our button for generating random numbers (#random-button) -->
+      <button id="random-button" class="btn btn-success btn-lg"><h1><span><i class="fas fa-cat"></i></span></span></h1></button>
+      
+    </div>
+
+  </div>
+
+  <!-- Here we have div called "random-number" where our random number will go -->
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+        
+        var numberarray = [];
+      $("#random-button").click(function () {
+        for(i = 0; i < 9; i++) {
+        numberarray[i]= Math.floor(Math.random() * 10);
+      }
+      
+      $("#random-number").html(numberarray);
+      
+    });
+  });
+  
+  </script>
+  
+</body>
+</html>
+
+<!-- john helped me with this -- he's the best!! -->
